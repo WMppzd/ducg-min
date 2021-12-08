@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "智能诊断记录",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "mp-sticky": "@miniprogram-component-plus/sticky",
+    "mp-loading": "weui-miniprogram/loading/loading",
+    "e-tabs": "../../../component/senior/tabs/tabs",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
+}

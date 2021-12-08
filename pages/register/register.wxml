@@ -1,0 +1,47 @@
+<!--pages/register/register.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+    <view class="page-head">
+        <image class="register-icon" src="../../images/logo-login.png" mode="aspectFit"/>
+    </view>
+
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="" footer="">
+            <mp-cell prop="phone" title="手机号" ext-class="">
+                <input type="number" bindinput="formInputChange" data-field="phone" class="weui-input"
+                       placeholder="请输入手机号"/>
+            </mp-cell>
+            <mp-cell prop="vcode" title="验证码" ext-class="weui-cell_vcode">
+                <input type="number" bindinput="formInputChange" data-field="vcode" class="weui-input"
+                       placeholder="请输入验证码"/>
+                <button slot="footer" type="default" disabled="{{codeAble}}"
+                        style="width:120px;padding:16px;margin: 0;border-radius: 0"
+                        bind:tap="sendSmsCode">{{codeText}}
+                </button>
+            </mp-cell>
+            <mp-cell prop="password" title="密码" ext-class="">
+                <input password="true" bindinput="formInputChange" data-field="password" class="weui-input"
+                       placeholder="请输入密码"/>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+
+    <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree">
+            <checkbox class="weui-agree__checkbox-check"/>
+            <text class="weui-agree__checkbox"></text>
+            <view class="weui-agree__text">我已查看并同意
+                <navigator
+                        url="../webpage/webpage?url=https://assets.ducg.aiphsn.com/user-content/docs/termsof-service.html">
+                    《用户协议》
+                </navigator>
+            </view>
+        </label>
+    </checkbox-group>
+
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bind:tap="registerVcodeLoginForm">注 册</button>
+    </view>
+</view>

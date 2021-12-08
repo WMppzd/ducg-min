@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "e-icon": "../../component/base/icon/icon"
+  },
+  "navigationBarTitleText": "商家信息"
+}

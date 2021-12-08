@@ -1,0 +1,21 @@
+<!--pages/package/package.wxml-->
+<view data-weui-theme="{{theme}}">
+
+    <e-icon-list
+            title='{{pkg.name}}'
+            subTitle='{{pkg.desc}}'
+            detail="{{pkg.datetime}}">
+        <e-base-button
+                slot='right'
+                text='{{pkg.price}}'
+                theme='fillingAndGradient2'
+                width='155'
+                height='50'
+                textSize='24'
+                color='#FE9036'
+                endColor='#FE4E36'
+                radius='50'>
+        </e-base-button>
+    </e-icon-list>
+
+</view>

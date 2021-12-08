@@ -1,0 +1,47 @@
+<!--pages/order/order/list.wxml-->
+<view data-weui-theme="{{theme}}">
+
+    <!--导航区-->
+    <!--    <e-tabs height="100" items='{{ ["VIP套餐订单", "专家诊断订单" ] }}' selected='0' catchitemtap='onTabClick'/>-->
+
+
+    <!--VIP套餐订单-->
+    <!--    <view wx:if="{{activeTab}}" class="list_zero">-->
+    <!--        <block wx:for="{{vip_orders}}" wx:key="id">-->
+    <!--            <view class="list_item" hover-class="list_item_hover" data-set="{{item}}" bind:tap="onListItemClick">-->
+    <!--                <text class="list_item_title">{{item.vip_type}}</text>-->
+    <!--                <text class="list_item_datetime">{{item.datetime}}</text>-->
+    <!--                <text class="list_item_action">查看</text>-->
+    <!--            </view>-->
+    <!--        </block>-->
+    <!--    </view>-->
+
+
+    <!--专家诊断订单-->
+    <!--    <view wx:if="{{!activeTab}}" class="list_one">-->
+
+    <mp-sticky>
+        <view class="list_item_arrow">
+            <text class="list_item_title">订单名称</text>
+            <text class="list_item_datetime">下单时间</text>
+            <text class="list_item_action_title">操作</text>
+        </view>
+    </mp-sticky>
+    <block wx:for="{{orders}}" wx:key="id">
+        <view class="list_item" hover-class="list_item_hover" data-order="{{item}}" bind:tap="onOrderClick">
+            <text class="list_item_title">{{item.itemName}}</text>
+            <text class="list_item_datetime">{{item.createdAt}}</text>
+            <text class="list_item_action_title list_item_action">查看</text>
+        </view>
+    </block>
+    <!--    </view>-->
+
+
+    <block wx:if="{{hasMore}}">
+        <mp-loading type="circle" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+    </block>
+    <block wx:else>
+        <text class="list_item_nomore">没有更多啦</text>
+    </block>
+</view>
+

@@ -1,0 +1,81 @@
+<!--https://assets.ducg.aiphsn.com/webpages/test.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>测试JSSDK</title>
+    <style>
+        #user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .btn {
+            width: 80%;
+            padding: 16px;
+            margin-top: 10px;
+        }
+
+        #uid {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="app">
+    <router-view></router-view>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+
+</body>
+
+<script>
+    const User = {
+        props: {
+            id: {
+                required: true,
+                default: 1
+            }
+        },
+        template: `
+          <div id="user">
+          <p id="uid">用户ID为 {{ id }} 的页面</p>
+          <button class="btn" @click="back">点我返回WebPage上一页</button>
+          <button class="btn" @click="enter">点我进入WebPage下一页</button>
+          <button class="btn" @click="back2min">点我返回MinSoft的上一页</button>
+          </div>
+        `,
+        methods: {
+            back() {
+                window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+            },
+            enter() {
+                this.$router.push(`/user/${parseInt(this.id) + 1}`);
+            },
+            back2min() {
+                wx.miniProgram.navigateBack();
+            }
+        }
+    }
+
+    const router = new VueRouter({
+        routes: [
+            {path: '/', redirect: "/user/1"},
+            {path: '/user/:id', component: User, props: true},
+        ]
+    })
+
+    const app = new Vue({
+        router
+    }).$mount('#app');
+
+</script>
+</html>

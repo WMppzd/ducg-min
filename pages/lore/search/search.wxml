@@ -1,0 +1,42 @@
+<!--pages/lore/lore.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+
+    <!--搜索框-->
+    <mp-sticky>
+        <e-search
+                cus="ls_search"
+                catchonsearch='searchLores'
+                catchonclean='cleanKeys'
+                placeholder='请输入搜索关键字'
+                focus="true"
+                bgColor='#fff'
+                color='#312229'
+                buttonColor='#3ec93e'>
+        </e-search>
+    </mp-sticky>
+
+    <!--搜索结果-->
+    <block wx:for="{{blogs}}" wx:key="id">
+        <view class="lore_item_v" hover-class="lore_item_hover" data-set="{{item}}" bind:tap="onLoreItemClick">
+            <text class="lore_item_title">{{item.title}}</text>
+            <view class="lore_item_h">
+                <image class="lore_item_thumb" src="{{item.imageUrls[0]}}" mode="aspectFill"></image>
+                <view class="lore_item_inner">
+                    <text class="lore_item_desc">{{item.description}}</text>
+                    <text class="lore_item_datetime">{{item.createdAt}} </text>
+                </view>
+            </view>
+        </view>
+    </block>
+
+    <block wx:if="{{hasMore}}">
+        <mp-loading type="circle" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+    </block>
+    <block wx:else>
+        <view class="ls_no_more">
+            <image class="ls_no_img" src="../../../images/search_dog.png"/>
+            <text class="lore_item_nomore">没有搜索到更多啦\n更换搜索关键字试试呗</text>
+        </view>
+    </block>
+
+</view>

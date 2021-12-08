@@ -1,0 +1,57 @@
+/* pages/order/order/list.wxss */
+
+.list_zero {
+    /*height: 100%;*/
+}
+
+.list_one {
+
+}
+
+.list_item {
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    background-color: white;
+    border-bottom-color: gainsboro;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.list_item_arrow {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 16px 8px;
+    background-color: #3ec93e;
+    width:calc(100vw - 16px);
+}
+
+.list_item_title {
+    flex: 1.5;
+    text-align: left;
+}
+
+.list_item_datetime {
+    flex: 1;
+    text-align: center;
+}
+
+.list_item_action {
+    color: #059a2e;
+}
+
+.list_item_action_title {
+    flex: 1;
+    text-align: center;
+}
+
+.list_item_hover {
+    background-color: #eeeeee;
+}
+
+.list_item_nomore {
+    display: block;
+    text-align: center;
+    padding: 24rpx;
+}

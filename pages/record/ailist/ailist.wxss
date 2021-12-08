@@ -1,0 +1,73 @@
+/* pages/ailist/ailist.wxss */
+
+.ailist_item_root {
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+}
+
+.ailist_item_root_ex {
+    background-color: #3ec93e;
+    color: white;
+    width:calc(100vw - 16px);
+}
+
+.ailist_item_id {
+    flex: 1;
+    text-align: center;
+}
+
+.ailist_item_name {
+    flex: 1;
+    text-align: center;
+}
+
+.ailist_item_disease {
+    flex: 3;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ailist_item_disease_v {
+    flex: 3;
+    color: #3cc51f;
+    text-align: center;
+}
+
+.ailist_item_datetime {
+    flex: 2;
+    text-align: center;
+}
+
+.ailist_item_see {
+    flex: 1;
+    text-align: center;
+}
+
+.ailist_item_see_v {
+    color: #898989;
+}
+
+.ailist_item_nomore {
+    display: block;
+    text-align: center;
+    padding: 24rpx;
+}
+
+.ailist_dialog {
+    display: flex;
+}
+
+.ailist_dialog_key {
+    flex: 1;
+    text-align: left;
+}
+
+.ailist_dialog_value {
+    flex: 1;
+    color: #3cc51f;
+    text-align: right;
+}

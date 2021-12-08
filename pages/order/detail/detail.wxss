@@ -1,0 +1,27 @@
+/* pages/order/detail/detail.wxss */
+
+.detail_bg_img {
+    width: 100vw;
+    height: 320rpx;
+}
+
+.detail_text_root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16rpx;
+}
+
+.detail_text_name {
+    font-size: larger;
+}
+
+.detail_text_price {
+    color: red;
+    font-size: xx-large;
+}
+
+.detail_cell {
+    margin-right: 16px;
+}

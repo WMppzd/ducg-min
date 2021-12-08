@@ -1,0 +1,5 @@
+<!--pages/webpage/webpage.wxml-->
+
+<view data-weui-theme="{{theme}}">
+    <web-view src="{{url}}"></web-view>
+</view>

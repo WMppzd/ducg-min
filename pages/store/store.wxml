@@ -1,0 +1,19 @@
+<!--pages/store/store.wxml-->
+<view data-weui-theme="{{theme}}">
+    <image src="{{imageURL}}" mode="aspectFill" class="store_avatar"></image>
+    <view class="store_sub_root">
+        <text class="store_name">{{name}}</text>
+        <view class="store_line"></view>
+        <view class="store_item" bind:tap="navigateMap">
+            <e-icon name="local" color="green"/>
+            <text class="store_address">{{address}}</text>
+        </view>
+        <view class="store_item" bind:tap="dialogPhone">
+            <e-icon name="hotline" color="green"/>
+            <text class="store_phone">{{phone}}</text>
+        </view>
+        <view class="store_line"></view>
+        <rich-text nodes="{{detail}}" space="nbsp"></rich-text>
+    </view>
+</view>
+

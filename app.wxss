@@ -1,0 +1,49 @@
+/**app.wxss**/
+@import './miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+/*@import './common.wxss';*/
+
+/* reset */
+page {
+  background-color: var(--weui-BG-2);
+  height: 100%;
+  /* font-size: 16px; */
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--weui-FG-0);
+}
+page>view {
+  width: 100vw;
+  max-width: 600px;
+}
+checkbox, radio{
+  margin-right: 5px;
+}
+button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+form{
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+
+/* lib */
+.strong{
+  font-weight: bold;
+}
+.tc{
+  text-align: center;
+}
+
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}

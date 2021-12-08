@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的套餐",
+  "usingComponents": {
+    "e-icon-list": "/component/list/icon_list/icon_list",
+    "e-head-portrait": "/component/base/head_portrait/head_portrait",
+    "e-base-button": "/component/button/base_button/base_button"
+  }
+}

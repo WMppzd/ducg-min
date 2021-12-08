@@ -1,0 +1,42 @@
+<view class="page" data-weui-theme="{{theme}}">
+
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+    <view class="page-head">
+        <image class="login-icon" src="../../images/logo-login.png" mode="aspectFit"/>
+    </view>
+
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="" footer="">
+            <mp-cell prop="phone" title="手机号" ext-class="">
+                <input type="number" bindinput="formInputChange" data-field="phone" class="weui-input"
+                       placeholder="请输入手机号"/>
+            </mp-cell>
+            <mp-cell wx:if="{{loginType == 'smsCode'}}" prop="vcode" title="验证码" ext-class="weui-cell_vcode">
+                <input type="number" bindinput="formInputChange" data-field="vcode" class="weui-input"
+                       placeholder="请输入验证码"/>
+                <button slot="footer" type="default" disabled="{{codeAble}}"
+                        style="width:120px;padding:16px;margin: 0;border-radius: 0"
+                        bind:tap="sendSmsCode">{{codeText}}
+                </button>
+            </mp-cell>
+            <mp-cell wx:if="{{loginType == 'password'}}" prop="password" title="密码" ext-class="">
+                <input password="true" bindinput="formInputChange" data-field="password" class="weui-input"
+                       placeholder="请输入登录密码"/>
+            </mp-cell>
+
+            <!-- 登录方式切换 -->
+            <mp-cell link hover value="{{loginTypeDesc}}" bind:tap="switchLoginType">
+                <image slot="icon" src="../../images/mine_login.png" class="login-cell"></image>
+            </mp-cell>
+            <mp-cell link hover value="注册账号" bind:tap="enterRegisterPage">
+                <image slot="icon" src="../../images/mine_register.png" class="login-cell"></image>
+            </mp-cell>
+
+        </mp-cells>
+    </mp-form>
+
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bind:tap="submitVcodeLoginForm">登 录</button>
+    </view>
+</view>

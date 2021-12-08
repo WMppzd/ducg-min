@@ -1,0 +1,41 @@
+/* pages/store/store.wxss */
+
+.store_avatar {
+    width: 100%;
+}
+
+.store_sub_root {
+    display: flex;
+    flex-direction: column;
+    padding: 16rpx
+}
+
+.store_item {
+    display: flex;
+    align-items: center;
+    padding: 8rpx 0;
+}
+
+.store_line {
+    height: 1px;
+    border-top:1px solid #b1b1b1;
+    margin: 16rpx 0;
+}
+
+.store_name {
+    font-size: large;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+}
+
+.store_address {
+    color: green;
+    border-bottom:1px dashed #3b6804;
+}
+
+.store_phone {
+    color: green;
+    border-bottom:1px dashed #3b6804;
+}

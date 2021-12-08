@@ -1,0 +1,53 @@
+<!--pages/diagnosis/diagnosis.wxml-->
+<view data-weui-theme="{{theme}}">
+    <!--  广告展示  -->
+    <mp-sticky>
+        <swiper class="diagnosis-sp" indicator-dots="true" circular="true" autoplay="true" interval="3000"
+                duration="500">
+            <block wx:for="{{blogs}}" wx:key="id">
+                <swiper-item bind:tap="enterAD" data-url="{{item.detailUrl}}">
+                    <image class="diagnosis-thumb" src="{{item.imageUrls[0]}}"></image>
+                    <text class="diagnosis-title">{{item.title}}</text>
+                </swiper-item>
+            </block>
+        </swiper>
+    </mp-sticky>
+
+    <!--  动物列表  -->
+    <view>
+        <image src="https://assets.ducg.aiphsn.com/user-content/minsoft/animal-bg.jpg"
+               class="diagnosis-animals-bg2"></image>
+        <block wx:for="{{categories}}" wx:key="categoryId">
+            <view class="diagnosis-types">
+                <text class="diagnosis-type-name">{{item.categoryName}}</text>
+            </view>
+            <view>
+                <mp-row>
+                    <block wx:for="{{item.animals}}" wx:key="animalID">
+                        <view bind:tap="enterAI" data-animal="{{item}}">
+                            <mp-col span="{{6}}">
+                                <view class="diagnosis-animals">
+                                    <view class="diagnosis-dot {{!item.online?'diagnosis-dot-gray':''}}">
+                                        <image class="diagnosis-icons" src="{{item.animalIcon}}"
+                                               mode="aspectFit"></image>
+                                    </view>
+                                    <text class="{{item.online?'diagnosis-name-default':'diagnosis-name-gray'}}">{{item.animalName}}</text>
+                                </view>
+                            </mp-col>
+                        </view>
+                    </block>
+                </mp-row>
+            </view>
+        </block>
+    </view>
+
+    <movable-area class="movable-area">
+        <movable-view class="movable-view" direction="all" bind:tap="enterMall">
+            <view class="movable-in">
+                <image class="movable-img" src="../../images/diagnosis_expert.png"></image>
+                <text class="movable-txt">专家</text>
+            </view>
+        </movable-view>
+    </movable-area>
+
+</view>

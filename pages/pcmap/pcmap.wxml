@@ -1,0 +1,26 @@
+<!--pages/pcmap/pcmap.wxml-->
+
+<view data-weui-theme="{{theme}}">
+    <map id="ducg_map"
+         style="width: 100%; height: 100vh;"
+         latitude="{{latitude}}"
+         longitude="{{longitude}}"
+         bindregionchange="regionchange"
+         bindmarkertap="markertap"
+         bindcallouttap="callouttap"
+         bindlabeltap="labeltap"
+         markers="{{markers}}"
+         scale="12">
+<!--        <cover-view slot="callout">-->
+<!--            <block wx:for="{{customCalloutMarkerIds}}" wx:key="*this">-->
+<!--                <cover-view class="customCallout" marker-id="{{item}}">-->
+<!--                    <cover-view class="content">-->
+<!--                        {{item}}-{{index}}-->
+<!--                    </cover-view>-->
+<!--                </cover-view>-->
+<!--            </block>-->
+<!--        </cover-view>-->
+    </map>
+
+
+</view>

@@ -1,0 +1,4 @@
+/* pages/record/edlist/detail/detail.wxss */
+.ed_detail_item_sub {
+    color: #3cc51f;
+}

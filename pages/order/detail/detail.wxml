@@ -1,0 +1,30 @@
+<!--pages/orderInfo/detail/detail.wxml-->
+<view data-weui-theme="{{theme}}">
+
+    <image mode="aspectFill" class="detail_bg_img" src="https://static01.imgkr.com/temp/27395086cf994354aab1e77b08d220df.jpg"></image>
+
+    <view class="detail_text_root">
+        <text class="detail_text_name">{{orderInfo.itemName}}</text>
+        <text class="detail_text_price">{{orderInfo.price}}</text>
+    </view>
+
+    <mp-cells title="">
+        <mp-cell hover value="{{orderInfo.state}}">
+            <text slot="title" class="detail_cell">当前状态:</text>
+        </mp-cell>
+        <mp-cell hover value="{{orderInfo.orderId}}">
+            <text slot="title" class="detail_cell">订单号码:</text>
+        </mp-cell>
+        <mp-cell hover value="{{orderInfo.createdAt}}">
+            <text slot="title" class="detail_cell">购买时间:</text>
+        </mp-cell>
+        <mp-cell hover value="{{orderInfo.paidAt}}">
+            <text slot="title" class="detail_cell">支付时间:</text>
+        </mp-cell>
+        <mp-cell hover value="{{orderInfo.payType}}">
+            <text slot="title" class="detail_cell">支付方式:</text>
+        </mp-cell>
+    </mp-cells>
+
+</view>
+

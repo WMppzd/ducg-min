@@ -1,0 +1,161 @@
+/* pages/diagnosis/diagnosis.wxss */
+.diagnosis-animal-bg {
+    /*background-image: url('https://assets.ducg.aiphsn.com/user-content/minsoft/animal-bg.jpg');*/
+    /* background-repeat: repeat-y; */
+    /*background-size: 100% 100%;*/
+}
+
+.diagnosis-animals-bg2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.diagnosis-type-jn {
+    width: 50px;
+    height: 20px;
+}
+
+.diagnosis-sp {
+    height: 50vw;
+    width:100vw;
+}
+
+.diagnosis-thumb {
+    width: 100%;
+    height: 100%;
+}
+
+.diagnosis-animals {
+    display: flex;
+    flex-direction: column;
+    padding: 8rpx;
+    align-items: center;
+}
+
+.diagnosis-icons {
+    width: 100%;
+    height: 100%;
+    margin: 8px;
+}
+
+.diagnosis-dot {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    border-color: white;
+    border-style: dashed;
+    border-width: 1rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.diagnosis-dot-gray {
+    border-color: lightgray;
+    border-style: dashed;
+    border-width: 1rpx;
+    background-color: lightgray;
+}
+
+
+
+.diagnosis-types {
+    border-color: white;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    text-align: center;
+    padding: 16rpx;
+}
+
+.diagnosis-type-name {
+    color: #116B47;
+    font-size: 16px;
+    /*text-shadow: 1px 1px 1px #15aa0b;*/
+    font-weight: bold;
+    background-color: white;
+
+    padding: 1px 16px;
+    width: 64px;
+    border-radius: 16px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.diagnosis-title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: white;
+    padding: 2px 8px;
+    background-color: rgba(0,0,0,0.3);
+
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.diagnosis-name-default {
+    color: white;
+    font-size: large;
+}
+
+.diagnosis-name-gray {
+    color: white;
+    font-size: large;
+}
+
+
+.movable-area {
+    pointer-events: none; /*这个属性设置为none, 让所有事件穿透过去*/
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.movable-view {
+    pointer-events: auto; /*重设为auto, 覆盖父属性设置*/
+    height: 56px;
+    width: 56px;
+    border-radius: 8px;
+    background:white;
+    top: 60vh;
+    left: calc(100vw - 66px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movable-view:active{
+    background: rgba(62, 201, 62, 1);
+}
+
+.movable-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.movable-img {
+    height: 50%;
+    width: 50%;
+}
+
+.movable-txt {
+    font-size: xx-small;
+}

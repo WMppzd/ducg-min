@@ -1,0 +1,22 @@
+/* pages/profile/profile.wxss */
+
+.profile_cell_avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 60rpx;
+    margin-right: 16rpx;
+    vertical-align: middle;
+}
+
+.profile_cell_text {
+    margin-right: 16rpx;
+    vertical-align: middle;
+    font-size: large;
+}
+
+.profile_btn_logout {
+    position: fixed;
+    bottom: 120rpx;
+    left: 10%;
+    width: 80% !important;
+}

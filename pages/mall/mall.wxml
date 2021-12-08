@@ -1,0 +1,36 @@
+<!--pages/mall/mall.wxml-->
+<view data-weui-theme="{{theme}}" style="margin: auto">
+
+    <image mode="scaleToFill" src="https://assets.ducg.aiphsn.com/user-content/minsoft/animal-bg.jpg" class="mall_bg" />
+
+    <view  class="mall_card" wx:for="{{products}}" wx:key="id">
+        <view class="mall_card_1">
+            <view class="mall_card_sub">
+                <text class="ma_title">{{item.title}}</text>
+<!--                <text class="ma_price">{{item.price / 100}}元</text>-->
+<!--                <text wx:if="{{item.itemType === 'ServicePlan'}}" class="ma_period">/{{item.period}}个月</text>-->
+<!--                <text wx:elif="{{item.itemType === 'ExpertService'}}" class="ma_period">/{{item.period}}次</text>-->
+            </view>
+            <text class="ma_desc">{{item.description}}</text>
+        </view>
+        <view class="mall_card_2" bind:tap="navigate2Services" data-service="{{item}}" >
+            <image wx:if="{{item.itemType === 'ServicePlan'}}" mode="aspectFit" class="ma_btn"
+                   src="../../images/mall_pay.png"/>
+            <image wx:elif="{{item.itemType === 'ExpertService'}}" mode="aspectFit" class="ma_btn"
+                   src="../../images/mall_start.png"/>
+        </view>
+    </view>
+
+<!--    <view class="mall_card">-->
+<!--        <view class="mall_card_1">-->
+<!--            <view class="mall_card_sub">-->
+<!--                <text class="ma_title">动保团购</text>-->
+<!--            </view>-->
+<!--            <text class="ma_desc">官方精选、严选商品</text>-->
+<!--        </view>-->
+<!--        <view class="mall_card_2"  bind:tap="navigate2MiniShop">-->
+<!--            <image mode="aspectFit" class="ma_btn" src="../../images/mall_group.png"/>-->
+<!--        </view>-->
+<!--    </view>-->
+
+</view>

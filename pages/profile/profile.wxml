@@ -1,0 +1,21 @@
+<!--pages/profile/profile.wxml-->
+<view data-weui-theme="{{theme}}">
+
+    <mp-cells title="">
+        <mp-cell link hover value="点击更换头像" bind:tap="onChooseAvatar">
+            <image slot="icon" src="{{avatarUrl}}" class="profile_cell_avatar"></image>
+        </mp-cell>
+        <mp-cell link hover value="昵称" footer="{{nickname}}" bind:tap="modifyNickname">
+        </mp-cell>
+        <mp-cell link hover value="手机号" footer="{{phone}}">
+        </mp-cell>
+        <mp-cell link hover value="密码" footer="点击修改" bind:tap="modifyPassword">
+        </mp-cell>
+    </mp-cells>
+
+    <button type="primary"  bind:tap="logout" class="profile_btn_logout">退出登录</button>
+
+    <mp-dialog title="{{dialogTitle}}" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <input class="weui-input" auto-focus placeholder="{{placeholder}}" bindinput="formInputChange"/>
+    </mp-dialog>
+</view>

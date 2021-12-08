@@ -1,0 +1,25 @@
+<!--pages/feedback/feedback.wxml-->
+<view data-weui-theme="{{theme}}">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="感谢您对我们的支持，期待您的宝贵意见">
+            <mp-cell has-header="{{false}}" has-footer="{{false}}" title="" prop="desc" ext-class="">
+                <textarea bindinput="formInputChange" data-field="desc" class="weui-textarea" placeholder="请在此输入您的意见/求助内容" style="height: 3.3em" />
+                <view class="weui-textarea-counter">0/200</view>
+            </mp-cell>
+        </mp-cells>
+        <mp-cells title="给您的反馈/求助来个标题吧">
+            <mp-cell prop="title" title="标题" ext-class="">
+                <input bindinput="formInputChange" class="weui-input" data-field="title" placeholder="请输入标题" />
+            </mp-cell>
+        </mp-cells>
+        <mp-cells title="联系方式">
+            <mp-cell prop="contact" title="手机号" ext-class="">
+                <input bindinput="formInputChange" data-field="contact" class="weui-input" placeholder="请输入手机号"/>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+
+    <button class="fd_btn_logout" type="primary" bindtap="submitForm">提交反馈</button>
+
+</view>

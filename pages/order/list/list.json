@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "专家诊断订单",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "e-tabs": "../../../component/senior/tabs/tabs",
+    "mp-sticky": "@miniprogram-component-plus/sticky",
+    "mp-loading": "weui-miniprogram/loading/loading"
+  }
+}

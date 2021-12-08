@@ -1,0 +1,56 @@
+<!--pages/ailist/ailist.wxml-->
+<view data-weui-theme="{{theme}}">
+
+    <mp-sticky>
+        <view class="ailist_item_root ailist_item_root_ex">
+            <text class="ailist_item_id">编号</text>
+            <text class="ailist_item_name">动物</text>
+            <text class="ailist_item_disease">疾病</text>
+            <text class="ailist_item_datetime">诊病时间</text>
+            <text class="ailist_item_see">操作</text>
+        </view>
+    </mp-sticky>
+
+    <block wx:for="{{diagnosis}}" wx:key="id">
+        <view class="ailist_item_root" data-diagnosis="{{item}}" bind:tap="enterDiagnosisDetailOrMakeOrder">
+            <text class="ailist_item_id">{{item.id}}</text>
+            <text class="ailist_item_name">{{item.animalName}}</text>
+
+            <block wx:for="{{item.diagnosisResult}}" wx:key="index">
+                <text class="ailist_item_disease_v"
+                      wx:if="{{index === 0}}">{{item.diseaseName}}({{item.probability}})</text>
+            </block>
+
+            <text class="ailist_item_datetime">{{item.createdAt}}</text>
+            <text class="ailist_item_see ailist_item_see_v">{{action}}</text>
+        </view>
+    </block>
+
+    <block wx:if="{{hasMore}}">
+        <mp-loading type="circle" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+    </block>
+    <block wx:else>
+        <text class="ailist_item_nomore">没有更多啦</text>
+    </block>
+
+    <mp-dialog title="创建订单" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>
+            <view class="ailist_dialog">
+                <text class="ailist_dialog_key">项目名称</text>
+                <text class="ailist_dialog_value">{{expertService.title}}</text>
+            </view>
+            <view class="ailist_dialog">
+                <text class="ailist_dialog_key">诊断费用</text>
+                <text class="ailist_dialog_value">{{expertService.price / 100}} 元</text>
+            </view>
+            <view class="ailist_dialog">
+                <text class="ailist_dialog_key">诊断编号</text>
+                <text class="ailist_dialog_value">{{selectedDiagnosis.id}}</text>
+            </view>
+            <view class="ailist_dialog">
+                <text class="ailist_dialog_key">动物名称</text>
+                <text class="ailist_dialog_value">{{selectedDiagnosis.animalName}}</text>
+            </view>
+        </view>
+    </mp-dialog>
+</view>

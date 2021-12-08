@@ -1,0 +1,45 @@
+/* pages/favorites/favorites.wxss */
+.favorites_item_hover {
+    background-color: #eeeeee;
+}
+
+.favorites_item_root {
+    display: flex;
+    flex-direction: column;
+    padding: 16rpx 24rpx;
+    background-color: white;
+    border-bottom-color: gainsboro;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.favorites_item_sub {
+    display: flex;
+    align-items: center;
+}
+
+.favorites_item_title {
+    font-size: larger;
+}
+
+.favorites_item_desc {
+    color: gray;
+    font-size: small;
+}
+
+.favorites_item_icon_text {
+    color: #afa9a9;
+    font-size: small;
+    margin: 8rpx 24rpx 8rpx 8rpx;
+}
+
+.favorites_item_icon{
+    width: 16px;
+    height: 16px;
+}
+
+
+.favorites_item_nomore {
+    display: block;
+    text-align: center;
+}

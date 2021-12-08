@@ -1,0 +1,29 @@
+{
+  "name": "minducg",
+  "version": "1.0.0",
+  "description": "ducg helper",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ducg"
+  ],
+  "author": "lijunbo",
+  "license": "ISC",
+  "dependencies": {
+    "@miniprogram-component-plus/col": "^1.0.0",
+    "@miniprogram-component-plus/row": "^1.0.0",
+    "@miniprogram-component-plus/sticky": "^1.0.1",
+    "@miniprogram-component-plus/tabs": "^1.0.0",
+    "axios": "^0.21.1",
+    "axios-miniprogram-adapter": "^0.3.2",
+    "blueimp-md5": "^2.18.0",
+    "coordtransform": "^2.1.2",
+    "crypto-js": "^4.1.1",
+    "js-base64": "^3.6.1",
+    "throttle-debounce": "^3.0.1",
+    "validator": "^13.5.2",
+    "weui-miniprogram": "^1.0.8"
+  }
+}

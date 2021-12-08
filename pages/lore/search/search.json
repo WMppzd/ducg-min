@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "搜索",
+  "onReachBottomDistance": 0,
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "e-search": "../../../component/form/search/search",
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar",
+    "mp-sticky": "@miniprogram-component-plus/sticky",
+    "mp-loading": "weui-miniprogram/loading/loading"
+  },
+  "disableScroll": false
+}

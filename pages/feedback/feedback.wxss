@@ -1,0 +1,8 @@
+/* pages/feedback/feedback.wxss */
+
+.fd_btn_logout {
+    position: fixed;
+    bottom: 120rpx;
+    left: 10%;
+    width: 80% !important;
+}

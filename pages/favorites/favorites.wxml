@@ -1,0 +1,21 @@
+<!--pages/favorites/favorites.wxml-->
+
+<view data-weui-theme="{{theme}}">
+
+    <block wx:for="{{favorites}}" wx:key="id">
+        <view class="favorites_item_root">
+            <text class="favorites_item_title">{{item.title}}</text>
+            <view class="favorites_item_sub">
+                <image class="favorites_item_icon" src="../../images/favorites_time.png"></image>
+                <text class="favorites_item_icon_text">{{item.datetime}}</text>
+                <image class="favorites_item_icon" src="../../images/favorites_count.png"></image>
+                <text class="favorites_item_icon_text">{{item.favorite_count}}</text>
+            </view>
+            <text class="favorites_item_desc">{{item.desc}}</text>
+        </view>
+    </block>
+
+    <mp-loading type="circle" show="{{has_more}}" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+    <text class="favorites_item_nomore" show="{{!has_more}}">没有更多内容了</text>
+</view>
+

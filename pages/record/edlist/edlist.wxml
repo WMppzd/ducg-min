@@ -1,0 +1,39 @@
+<!--pages/edlist/edlist.wxml-->
+<view data-weui-theme="{{theme}}">
+    <mp-sticky>
+        <view class="edlist_item_root edlist_item_root_ex">
+            <text class="edlist_item_id">编号</text>
+            <text class="edlist_item_name">动物</text>
+            <text class="edlist_item_disease">诊断结果</text>
+            <text class="edlist_item_datetime">诊病时间</text>
+            <text class="edlist_item_state_doing">状态</text>
+        </view>
+    </mp-sticky>
+
+    <block wx:for="{{expertServices}}" wx:key="id">
+        <view class="edlist_item_root" data-diagnosis="{{item}}" bind:tap="enterDiagnosisDetail">
+            <text class="edlist_item_id">{{item.id}}</text>
+            <text class="edlist_item_name">{{item.recognition.animalName}}</text>
+            <block wx:if="{{item.expertResult == null || item.expertResult == '' || item.expertResult == undefined }}">
+                <text class="edlist_item_disease_v">无</text>
+            </block>
+            <block wx:else>
+                <text class="edlist_item_disease_v">{{item.expertResult}}</text>
+            </block>
+            <text class="edlist_item_datetime">{{item.createdAt}}</text>
+            <block wx:if="{{item.state === '诊断中'}}">
+                <text class="edlist_item_state_doing">{{item.state}}</text>
+            </block>
+            <block wx:else>
+                <text class="edlist_item_state_finish">{{item.state}}</text>
+            </block>
+        </view>
+    </block>
+
+    <block wx:if="{{hasMore}}">
+        <mp-loading type="circle" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+    </block>
+    <block wx:else>
+        <text class="edlist_item_nomore">没有更多啦</text>
+    </block>
+</view>

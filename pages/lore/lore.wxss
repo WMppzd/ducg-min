@@ -124,3 +124,55 @@
     height: 50%;
     width: 50%;
 }
+
+/* 专家授课 */
+.lore_item_class{
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+.lore_item_class_box{
+    width: 100%; 
+    border-radius: 12rpx;
+    border: 1px solid rgba(187, 187, 187, 100); 
+}
+.lore_item_class_imgbox{
+    width: 100%;
+    height: 440rpx;
+    position: relative;
+}
+.lore_item_class_img{
+    width: 100%;
+    height: 100%;
+}
+.lore_item_class_title{
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.38);
+    color: #fff;
+    padding: 0 8rpx;
+    line-height: 70rpx;
+}
+.lore_item_class_infobox{
+    width: 100%;
+    padding: 20rpx 0;
+}
+.lore_item_class_info{
+    padding: 0 20rpx;
+    display: flex;
+    line-height: 60rpx;
+    font-size: 26rpx;
+}
+.lore_item_class_infoitem{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.lore_item_class_infoimg{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 18rpx;
+}
+

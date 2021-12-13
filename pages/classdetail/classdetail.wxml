@@ -1,0 +1,29 @@
+<!--pages/classdetail/classdetail.wxml-->
+<view class="detail-container">
+    <video class="detail-video" controls="true" show-mute-btn="true" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+    <view class="detail-box">
+        <view class="detail-item">
+            <view class="detail-key">课程名称：</view>
+            <view class="detail-value">萨法范德萨</view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">课程讲师：</view>
+            <view class="detail-value">萨法范德萨</view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">发布时间：</view>
+            <view class="detail-value">萨法范德萨</view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">课程详情：</view>
+            <view class="detail-value">萨法范德萨法范德萨法范德萨法范德萨法范德萨法范德萨法范德萨</view>
+        </view>
+        <view class="detail-word">
+            课程推荐
+        </view>
+        <view class="detail-other">
+            <image src="../../images/mine_ais.png"></image>
+        </view>
+    </view>
+    <lookbar></lookbar>
+</view>

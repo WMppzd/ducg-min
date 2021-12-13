@@ -1,0 +1,31 @@
+/* pages/classdetail/classdetail.wxss */
+.detail-container{
+    padding-bottom: 160rpx;
+}
+.detail-video{
+    width: 100%;
+    height: 360rpx;
+    margin-bottom: 20rpx;
+}
+.detail-box{
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+.detail-item{
+    width: 100%;
+    display: flex;
+    margin-top: 10rpx;
+    font-size: 32rpx;
+}
+.detail-key{
+    flex-shrink:0;
+}
+.detail-word{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    border: 1px solid rgba(187, 187, 187, 100);
+    text-align: center;
+    border-radius: 10rpx;
+    margin-top: 50rpx;
+}

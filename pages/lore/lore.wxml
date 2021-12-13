@@ -3,22 +3,52 @@
 
     <!--导航区 , "专家授课" , "课件管理" -->
     <mp-sticky>
-        <e-tabs height="100" items='{{ ["知识资讯", "政务资讯"] }}' selected='0' catchitemtap='onTabClick'/>
+        <e-tabs height="100" items='{{ ["知识资讯", "政务资讯","专家授课"] }}' selected='0' catchitemtap='onTabClick'/>
     </mp-sticky>
 
     <!--知识资讯-->
     <view class="lore_zero">
-        <block wx:for="{{blogs}}" wx:key="id">
-            <view class="lore_item_v" hover-class="lore_item_hover" data-set="{{item}}" bind:tap="onLoreItemClick">
-                <text class="lore_item_title">{{item.title}}</text>
-                <view class="lore_item_h">
-                    <image class="lore_item_thumb" src="{{item.imageUrls[0]}}" mode="aspectFill"></image>
-                    <view class="lore_item_inner">
-                        <text class="lore_item_desc">{{item.description}}</text>
-                        <text class="lore_item_datetime">{{item.createdAt}} </text>
+        <block wx:for="{{blogs}}" wx:key="id" >
+            <block wx:if="{{tabIndex!=2}}">
+                <view class="lore_item_v" hover-class="lore_item_hover" data-set="{{item}}" bind:tap="onLoreItemClick">
+                    <text class="lore_item_title">{{item.title}}</text>
+                    <view class="lore_item_h">
+                        <image class="lore_item_thumb" src="{{item.imageUrls[0]}}" mode="aspectFill"></image>
+                        <view class="lore_item_inner">
+                            <text class="lore_item_desc">{{item.description}}</text>
+                            <text class="lore_item_datetime">{{item.createdAt}} </text>
+                        </view>
                     </view>
                 </view>
-            </view>
+            </block>
+           <block wx:else>
+                <view class="lore_item_class" bind:tap="toClassDetail" data-set="{{item}}">
+                    <view class="lore_item_class_box">
+                        <view class="lore_item_class_imgbox">
+                            <image class="lore_item_class_img" src="{{item.imageUrls[0]}}"></image>
+                            <text class="lore_item_class_title">{{item.title}}</text>
+                        </view>
+                        <view class="lore_item_class_infobox">
+                            <view class="lore_item_class_info">
+                                <view class="lore_item_class_infoitem">
+                                    <image class="lore_item_class_infoimg" src="../../images/lore_user.png"></image>
+                                    <text>1312312</text>
+                                </view>
+                                <view class="lore_item_class_infoitem">
+                                    <image class="lore_item_class_infoimg" src="../../images/lore_look.png"></image>
+                                    <text>1312312</text>
+                                </view>
+                            </view>
+                            <view class="lore_item_class_info">
+                                <view class="lore_item_class_infoitem">
+                                    <image class="lore_item_class_infoimg" src="../../images/lore_time.png"></image>
+                                    <text>1312312</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+           </block>
         </block>
 
         <block wx:if="{{hasMore}}">
@@ -27,8 +57,7 @@
         <block wx:else>
             <text class="lore_item_nomore">没有更多啦</text>
         </block>
-
-        <movable-area class="movable-area">
+        <movable-area class="movable-area" wx:if="{{tabIndex!=2}}">
             <movable-view class="movable-view" direction="all" bind:tap="searchLores">
                 <image class="movable-img" src="../../images/lore_search.png"></image>
             </movable-view>

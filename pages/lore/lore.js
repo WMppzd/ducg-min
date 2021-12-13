@@ -21,20 +21,23 @@ CustomPage({
         totalPageNumber: 0,
         pageNumber: 1,
         categoryId: 1,
-        pageSize: 10
+        pageSize: 10,
+        tabIndex:0
     },
 
     onTabClick(e) {
-        const {index} = e.detail.currentTarget.dataset;
-        // const activeTab = index === 0;
+        const  tabIndex = e.detail.currentTarget.dataset.index;
+        // const activeTab = tabIndex === 0;
+        console.log(tabIndex);
         let categoryId = this.data.categoryId;
-        if (index === 0) categoryId = 1;
-        if (index === 1) categoryId = 2;
-        this.setData({categoryId});
+        if (tabIndex === 0) categoryId = 1;
+        if (tabIndex === 1) categoryId = 2;
+        if (tabIndex === 2) categoryId = 3;
+        this.setData({categoryId,tabIndex,blogs:[]});
         this.getKnowledgeList(true);
     },
 
-    @wx.api.auth
+    // @wx.api.auth
     onLoreItemClick(e) {
         const {detailUrl} = e.currentTarget.dataset.set;
         console.log(detailUrl);
@@ -42,7 +45,7 @@ CustomPage({
         wx.navigateTo({url: `../webpage/webpage?url=${url}`});
     },
 
-    @wx.api.auth
+    // @wx.api.auth
     getExpertServicesEnterDiagnosisList(e) {
         const that = this;
         const app = getApp();
@@ -127,7 +130,13 @@ CustomPage({
     searchLores(e) {
         wx.navigateTo({url: `./search/search`});
     },
-
+    toClassDetail(a){
+        console.log(a);
+        wx.navigateTo({
+          url: '../classdetail/classdetail',
+        })
+    },
+    
     // onTabItemTap(item) {
     //     const {pagePath} = item;
     //     setLastPage(pagePath);

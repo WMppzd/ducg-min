@@ -1,0 +1,20 @@
+<!--component/lookbar.wxml-->
+<view class="lookbar-container">
+    <view class="lookbar-box">
+        <image class="lookbar-img" src="../../images/mine_ais.png"></image>
+        10 人觉得这文章不错
+    </view>
+    <view class="lookbar-box">
+        <image class="lookbar-img" src="../../images/mine_ais.png"></image>
+        28
+    </view>
+    <view class="lookbar-box">
+        <image class="lookbar-img" src="../../images/mine_ais.png"></image>
+        收藏
+        <!-- <image class="lookbar-img" src="../../images/mine_ais.png"></image> -->
+    </view>
+    <view class="lookbar-box">
+        <!-- <image class="lookbar-img" src="../../images/mine_ais.png"></image> -->
+        <image class="lookbar-img" src="../../images/mine_ais.png"></image>
+    </view>
+</view>

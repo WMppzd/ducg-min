@@ -25,5 +25,14 @@
     "throttle-debounce": "^3.0.1",
     "validator": "^13.5.2",
     "weui-miniprogram": "^1.0.8"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WMppzd/ducg-min.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WMppzd/ducg-min/issues"
+  },
+  "homepage": "https://github.com/WMppzd/ducg-min#readme"
 }

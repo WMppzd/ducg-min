@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "服务机构",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "mp-sticky": "@miniprogram-component-plus/sticky",
+    "mp-loading": "weui-miniprogram/loading/loading"
+  }
+}

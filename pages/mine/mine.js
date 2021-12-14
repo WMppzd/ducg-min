@@ -116,6 +116,16 @@ CustomPage({
         wx.navigateTo({url: `../feedback/feedback`});
     },
 
+    enterExpertList(e){
+        wx.navigateTo({url: `../record/ExpertLists/expertLists`});
+    },
+    enterCollectionPage(e){
+        wx.navigateTo({url: `../record/Collection/collection`});
+    },
+    enterconsultationPage(e){
+        wx.navigateTo({url: `../record/consultation/consultation`});
+    },
+
     enterCourse(e) {
         wx.navigateToMiniProgram({
             appId: 'wx8abaf00ee8c3202e',

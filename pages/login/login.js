@@ -47,6 +47,11 @@ CustomPage({
         wx.navigateTo({url: '../register/register'});
     },
 
+    // 快捷注册
+    enterquickPage: function(){
+
+    },
+
     switchLoginType: function (_) {
         if ('smsCode' === this.data.loginType) {
             this.setData({

@@ -1,0 +1,81 @@
+<!--pages/lore/lore.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+
+<!--导航区 , "专家授课" , "课件管理" -->
+<mp-sticky>
+    <e-tabs height="100" items='{{ ["知识资讯", "专家授课"] }}' selected='0' catchitemtap='onTabClick'/>
+</mp-sticky>
+
+<!--知识资讯-->
+<view class="lore_zero">
+    <block wx:for="{{blogs}}" wx:key="id" >
+        <block wx:if="{{tabIndex==0}}">
+            <view class="lore_item_v" hover-class="lore_item_hover" data-set="{{item}}" bind:tap="onLoreItemClick">
+                <text class="lore_item_title">{{item.title}}</text>
+                <view class="lore_item_h">
+                    <image class="lore_item_thumb" src="{{item.imageUrls[0]}}" mode="aspectFill"></image>
+                    <view class="lore_item_inner">
+                        <text class="lore_item_desc">{{item.description}}</text>
+                        <text class="lore_item_datetime">{{item.createdAt}} </text>
+                    </view>
+                </view>
+            </view>
+        </block>
+       <block wx:if="{{tabIndex==1}}">
+            <view class="lore_item_class" bind:tap="toClassDetail" data-set="{{item}}" bind:tap="onLoreItemClick">
+                <view class="lore_item_class_box">
+                    <view class="lore_item_class_imgbox">
+                        <image class="lore_item_class_img" src="{{item.imageUrls[0]}}"></image>
+                        <text class="lore_item_class_title">{{item.title}}</text>
+                    </view>
+                    <view class="lore_item_class_infobox">
+                        <view class="lore_item_class_info">
+                            <view class="lore_item_class_infoitem">
+                                <image class="lore_item_class_infoimg" src="../../images/lore_user.png"></image>
+                                <text>1312312</text>
+                            </view>
+                            <view class="lore_item_class_infoitem">
+                                <image class="lore_item_class_infoimg" src="../../images/lore_look.png"></image>
+                                <text>1312312</text>
+                            </view>
+                        </view>
+                        <view class="lore_item_class_info">
+                            <view class="lore_item_class_infoitem">
+                                <image class="lore_item_class_infoimg" src="../../images/lore_time.png"></image>
+                                <text>1312312</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+       </block>
+    </block>
+
+    <block wx:if="{{hasMore}}">
+        <mp-loading type="circle" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+    </block>
+    <block wx:else>
+        <text class="lore_item_nomore">没有更多啦</text>
+    </block>
+    <movable-area class="movable-area" wx:if="{{tabIndex!=2}}">
+        <movable-view class="movable-view" direction="all" bind:tap="searchLores">
+            <image class="movable-img" src="../../images/lore_search.png"></image>
+        </movable-view>
+    </movable-area>
+</view>
+
+<!--专家咨询-->
+<!--    <view wx:if="{{!activeTab}}" class="lore_one">-->
+<!--        <image class="ln_logo" src="../../images/expert_diagnosis.png" mode="aspectFit"/>-->
+<!--        <text class="ln_desc">如果您对系统的智能诊断结果存在疑问-->
+<!--            或者有众多的不确定性因素-->
+<!--            那您可以通过付费来发起专家诊断-->
+<!--            我们的专家会在24小时内-->
+<!--            通过电话、微信、专线视频-->
+<!--            跟您了解实际情况-->
+<!--            并将诊断结果发送到小程序-->
+<!--            以便您作为详细的参考</text>-->
+<!--        <button type="primary" bind:tap="getExpertServicesEnterDiagnosisList">发起</button>-->
+<!--    </view>-->
+
+</view>

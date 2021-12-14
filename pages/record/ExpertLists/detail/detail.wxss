@@ -1,0 +1,72 @@
+/* pages/record/edlist/detail/detail.wxss */
+.ed_detail_item_sub {
+    color: #3cc51f;
+}
+
+.exDetail{
+    padding: 10px 10px 10px 20px;
+}
+.exDetail_content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.exDetail_titel,.exDetail_conts{
+    flex: 1;
+}
+
+/* 支付按钮 */
+.payments , .CancelPayments{
+    padding: 10px 30px;
+    text-align: center;
+}
+.payment{
+    padding: 10px 50px;
+    background: #0CC160;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.CancelPayment{
+    padding: 10px 50px;
+    border-radius: 10px;
+    color: #55795A;
+    background: #f2f2f2;
+}
+
+/* 病例 */
+.exDetail_medical{
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* 结果反馈 */
+.exDetail_content_result{
+   margin-bottom: 10px;
+}
+.exDetail_content_result_title{
+    margin-right: 24%;
+}
+.exDetail_content_result_solve{
+    padding: 5px 10px;
+    background: rgb(158, 160, 156);
+    color: #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.exDetail_content_result_Unresolved{
+    padding: 5px 10px;
+    background: rgb(158, 160, 156);
+    color: #ccc;
+    border-radius: 10px;
+}
+.exDetail_content_result_actived{
+    background: chartreuse;
+    color: #fff;
+}
+/* justify-content: space-between;
+ */

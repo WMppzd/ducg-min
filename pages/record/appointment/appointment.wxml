@@ -1,0 +1,35 @@
+<view data-weui-theme="{{theme}}">
+    <view class="expertLists_jp">对号</view>
+    <view class="expertLists_jp">预约申请提交成功</view>
+    <view class="expertLists_jp">我们尽快同事专家为您安排应诊</view>
+    <view class="expertLists_jp">请您留意短信、电话、客服等渠道的通知信息</view>
+    <view class="expertLists_jp">以免耽误应诊时间</view>
+    <view class="expertLists_jp">请您再次确认您的预约申请信息</view>
+
+
+    <block>
+      <view class="expertLists" bind:tap="enterDiagnosisDetail">
+        <view class="expertLists_item">
+            <view class="expertLists_item_img">
+                <image slot="icon" src="../../../images/mine_experts.png" class="expertLists_cell"></image>
+                <view class="expertLists_item_img_detail">查看详情</view>
+            </view>
+            <view class="expertLists_item_right">
+                <view class="expertLists_item_right_title">
+                   <text>姓名</text>
+                   <text>xxxxxxxxxxx</text>
+                </view>
+                <view class="expertLists_item_right_content">
+                    <text>xxxxxxxx内容</text>
+                </view>
+            </view>
+        </view>
+      </view>
+    </block>
+    <view class="expertLists_jp">点此查看远程会诊流程</view>
+    <!-- 跳转 专家诊断记录（申请） 页面 -->
+    <view class="expertLists_jp" bind:tap="correct">确认无误</view>
+    <!-- 跳转 商场页面 -->
+    <view class="expertLists_jp" bind:tap="cancel">取消预约</view>
+
+</view>

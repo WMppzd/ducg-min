@@ -28,15 +28,25 @@
         <mp-cell link hover value="智能诊断记录" bind:tap="enterAINoteList">
             <image slot="icon" src="../../images/mine_ais.png" class="mine_cell"></image>
         </mp-cell>
-        <mp-cell link hover value="专家诊断记录" bind:tap="enterEDNoteList">
+        <!-- 1、普通用户 文案：专家诊断记录  2、专家用户 文案：专家会诊记录-->
+        <mp-cell link hover value="专家诊断记录" bind:tap="enterExpertList">
             <image slot="icon" src="../../images/mine_experts.png" class="mine_cell"></image>
         </mp-cell>
-        <mp-cell link hover value="专家诊断订单" bind:tap="enterOrderPage">
-            <image slot="icon" src="../../images/mine_order.png" class="mine_cell"></image>
+        <mp-cell link hover value="专家指导记录" bind:tap="enterEDNoteList">
+            <image slot="icon" src="../../images/mine_experts.png" class="mine_cell"></image>
         </mp-cell>
     </mp-cells>
 
     <mp-cells title="用户服务">
+        <mp-cell link hover value="我的订单" bind:tap="enterOrderPage">
+            <image slot="icon" src="../../images/mine_order.png" class="mine_cell"></image>
+        </mp-cell>
+        <mp-cell link hover value="我的收藏" bind:tap="enterCollectionPage">
+            <image slot="icon" src="../../images/mine_order.png" class="mine_cell"></image>
+        </mp-cell>
+        <mp-cell link hover value="远程会诊室" bind:tap="enterconsultationPage">
+            <image slot="icon" src="../../images/mine_order.png" class="mine_cell"></image>
+        </mp-cell>
         <button open-type="contact" bindcontact="handleContact">
             <mp-cell link hover url="./cell" value="联系客服">
                 <image slot="icon" src="../../images/mine_server.png" class="mine_cell"></image>

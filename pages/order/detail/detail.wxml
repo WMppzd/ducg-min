@@ -24,6 +24,8 @@
         <mp-cell hover value="{{orderInfo.payType}}">
             <text slot="title" class="detail_cell">支付方式:</text>
         </mp-cell>
+        <mp-cell link hover value="关联服务" bind:tap="enterOrderPage">
+        </mp-cell>
     </mp-cells>
 
 </view>

@@ -1,0 +1,13 @@
+<!--pages/classdetail/classdetail.wxml-->
+<view class="detail-container">
+    <video class="detail-video" controls="true" show-mute-btn="true" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+    <view class="detail-box">
+        <view class="detail-item">
+            <view class="detail-key">会员服务内容介绍</view>
+        </view>
+
+        <view class="detail-purchase">
+            <view class="detail-chase">确认购买</view>
+        </view>
+    </view>
+</view>

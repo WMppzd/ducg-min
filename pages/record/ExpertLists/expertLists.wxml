@@ -1,0 +1,29 @@
+<view data-weui-theme="{{theme}}">
+    <block>
+        <view class="expertLists" bind:tap="enterDiagnosisDetail">
+            <view class="expertLists_item">
+                <view class="expertLists_item_img">
+                    <image slot="icon" src="../../../images/mine_experts.png" class="expertLists_cell"></image>
+                </view>
+                <view class="expertLists_item_right">
+                    <view class="expertLists_item_right_number">
+                        <text>会议编号：</text>
+                        <text>xxx</text>
+                        <text>会诊状态：</text>
+                        <text>预约中</text>
+                    </view>
+                    <view class="expertLists_item_right_expert">
+                        <text>接诊专家：</text>
+                        <text>xxx</text>
+                        <text>就诊动物：</text>
+                        <text>🐷</text>
+                    </view>
+                    <view class="expertLists_item_right_date">
+                        <text>日期时间：</text>
+                        <text>xxx</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

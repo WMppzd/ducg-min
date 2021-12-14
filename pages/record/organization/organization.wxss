@@ -1,0 +1,114 @@
+/* pages/edlist/edlist.wxss */
+
+/* .edlist_item_root {
+    display: flex;
+    align-items: center;
+    padding: 16px 8px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+}
+
+.edlist_item_root_ex {
+    background-color: #3ec93e;
+    color: white;
+    width:calc(100vw - 16px);
+}
+
+.edlist_item_id {
+    flex: 1;
+    text-align: center;
+}
+
+.edlist_item_name {
+    flex: 1;
+    text-align: center;
+}
+
+.edlist_item_sub {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+}
+
+.edlist_item_disease {
+    flex: 3;
+    color: #ffffff;
+    text-align: center;
+}
+
+.edlist_item_disease_v {
+    flex: 3;
+    color: #3cc51f;
+    text-align: center;
+}
+
+.edlist_item_datetime {
+    flex: 2;
+    text-align: center;
+}
+
+.edlist_item_state_finish {
+    flex: 2;
+    text-align: center;
+    color: #3cc51f;
+}
+
+.edlist_item_state_doing {
+    flex: 2;
+    text-align: center;
+}
+
+.edlist_item_nomore {
+    display: block;
+    text-align: center;
+    padding: 24rpx;
+} */
+.expertLists{
+    padding: 10px;
+}
+.expertLists_item{
+    display: flex;
+    border:1px solid red;
+    position: relative;
+}
+.expertLists_item_img{
+    flex: 1;
+}
+.expertLists_item_img_detail{
+    position: absolute;
+    bottom: 0;
+    background: red;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    filter: opacity(0.5);
+}
+.expertLists_item_right{
+    flex: 2;
+    padding: 10px 0;
+    font-size: 12px;
+}
+.expertLists_cell{
+    width: 100px;
+    height: 100px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+.expertLists_item_right_number{
+    margin-bottom: 10px;
+}
+.expertLists_item_right_expert{
+    margin-bottom: 10px;
+}
+.expertLists_item_right_title{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.expertLists_item_right_content{
+
+}
+.expertLists_jp{
+    padding: 10px;
+    font-size: 14px;
+}

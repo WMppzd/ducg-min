@@ -23,23 +23,23 @@ CustomPage({
         }
         if ("ServicePlan" === itemType && itemId === 3) {
             // 企业版
+            this.getExpertenterpriseisList();
         }
         if ("ExpertService" === itemType && itemId === 1) {
             // 专家诊断
+            this.getExpertDiagnosisList();
         }
         if ("ExpertService" === itemType && itemId === 2) {
             // 专家指导
             this.getExpertServicesEnterDiagnosisList();
         }
     },
-
-    @wx.api.auth
-    getExpertServicesEnterDiagnosisList() {
+    getExpertenterpriseisList(){
         const that = this;
         const app = getApp();
 
         if (app.globalData.expertService) {
-            wx.navigateTo({url: `../record/ailist/ailist?sourceType=${Const.SourceType.DIAGNOSIS}`});
+            wx.navigateTo({url: `../record/MemberIn/MemberIn?sourceType=${Const.SourceType.DIAGNOSIS}`});
             return;
         }
         wx.api.getExpertServiceList()
@@ -49,7 +49,67 @@ CustomPage({
 
                 if (0 === code) {
                     app.globalData.expertService = expertServices[1];
-                    wx.navigateTo({url: `../record/ailist/ailist?sourceType=${Const.SourceType.DIAGNOSIS}`});
+                    wx.navigateTo({url: `../record/MemberIn/MemberIn?sourceType=${Const.SourceType.DIAGNOSIS}`});
+                } else {
+                    wx.showModal({
+                        title: '提示',
+                        content: msg,
+                        confirmText: '我知道了',
+                        showCancel: false
+                    });
+                }
+            })
+            .catch(err => {
+                that.log_error(err);
+            });
+    },
+    getExpertDiagnosisList(){
+        const that = this;
+        const app = getApp();
+
+        if (app.globalData.expertService) {
+            wx.navigateTo({url: `../record/organization/organization?sourceType=${Const.SourceType.DIAGNOSIS}`});
+            return;
+        }
+        wx.api.getExpertServiceList()
+            .then(res => {
+                const {code, msg, data} = res;
+                const {expertServices} = data;
+
+                if (0 === code) {
+                    app.globalData.expertService = expertServices[1];
+                    wx.navigateTo({url: `../record/organization/organization?sourceType=${Const.SourceType.DIAGNOSIS}`});
+                } else {
+                    wx.showModal({
+                        title: '提示',
+                        content: msg,
+                        confirmText: '我知道了',
+                        showCancel: false
+                    });
+                }
+            })
+            .catch(err => {
+                that.log_error(err);
+            });
+    },
+
+    @wx.api.auth
+    getExpertServicesEnterDiagnosisList() {
+        const that = this;
+        const app = getApp();
+
+        if (app.globalData.expertService) {
+            wx.navigateTo({url: `../record/guidance/guidance?sourceType=${Const.SourceType.DIAGNOSIS}`});
+            return;
+        }
+        wx.api.getExpertServiceList()
+            .then(res => {
+                const {code, msg, data} = res;
+                const {expertServices} = data;
+
+                if (0 === code) {
+                    app.globalData.expertService = expertServices[1];
+                    wx.navigateTo({url: `../record/guidance/guidance?sourceType=${Const.SourceType.DIAGNOSIS}`});
                 } else {
                     wx.showModal({
                         title: '提示',

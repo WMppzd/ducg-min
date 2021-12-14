@@ -1,0 +1,36 @@
+<!--pages/order/order/list.wxml-->
+<view data-weui-theme="{{theme}}">
+
+<!-- 导航区 -->
+<mp-sticky>
+    <e-tabs height="100" items='{{ ["待会诊", "会诊中", "已会诊" ] }}' selected='0' catchitemtap='onTabClick'/>
+</mp-sticky>
+<view class="consultation">
+    <view class="consultation_item">
+        <view class="consultation_item_img">
+            <image slot="icon" src="../../../images/mine_order.png" class="consultation_item_imgs"></image>
+        </view>
+        <view class="consultation_item_con">
+            <view class="consultation_item_cons">会议编号：xxxxx</view>
+            <view class="consultation_item_cons">会议名称：xxxxx</view>
+            <view class="consultation_item_cons">会议时段：xxxxx</view>
+            <view class="consultation_item_cons">参会人员：xxxxx</view>
+            <view class="meeting">进入会议</view>
+        </view>
+    </view>
+</view>
+
+</view>
+
+
+<!--    </view>-->
+
+
+<!-- <block wx:if="{{hasMore}}">
+    <mp-loading type="circle" animated="true" duration="1000" tips="正在加载更多"></mp-loading>
+</block>
+<block wx:else>
+    <text class="list_item_nomore">没有更多啦</text>
+</block> -->
+
+

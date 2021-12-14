@@ -21,7 +21,13 @@
         "pages/store/store",
         "pages/feedback/feedback",
         "pages/webpage/webpage",
-        "pages/classdetail/classdetail"
+        "pages/classdetail/classdetail",
+        "pages/record/consultation/consultation",
+        "pages/record/guidance/guidance",
+        "pages/record/organization/organization",
+        "pages/record/organization/detail/detail",
+        "pages/record/appointment/appointment",
+        "pages/record/MemberIn/MemberIn"
     ],
     "window": {
         "navigationBarTextStyle": "@navigationBarTextStyle",

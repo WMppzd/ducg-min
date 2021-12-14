@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "预约申请",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "mp-sticky": "@miniprogram-component-plus/sticky",
+    "mp-loading": "weui-miniprogram/loading/loading"
+  }
+}

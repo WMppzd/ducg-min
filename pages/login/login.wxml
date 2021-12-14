@@ -32,6 +32,9 @@
             <mp-cell link hover value="注册账号" bind:tap="enterRegisterPage">
                 <image slot="icon" src="../../images/mine_register.png" class="login-cell"></image>
             </mp-cell>
+            <mp-cell link hover value="快捷注册账号" bind:tap="enterquickPage">
+                <image slot="icon" src="../../images/mine_register.png" class="login-cell"></image>
+            </mp-cell>
 
         </mp-cells>
     </mp-form>

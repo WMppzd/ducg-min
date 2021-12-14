@@ -1,0 +1,106 @@
+<view data-weui-theme="{{theme}}">
+    <view class="exDetail">
+      
+        <view class="exDetail_content">
+            <view class="exDetail_titel">会诊编号</view>
+            <view class="exDetail_conts">xxxx</view>
+        </view>
+
+        <!-- 1、预约中 2、预约成功-待支付 3、待会诊 4、已结诊 6、已评价-->
+        <view class="exDetail_content">
+            <text class="exDetail_titel">会诊状态</text>
+            <text class="exDetail_conts">xxxx</text>
+        </view>
+
+    <view class="exDetail_content">
+        <text class="exDetail_titel">日期时间</text>
+        <text class="exDetail_conts">xxxx</text>
+    </view>
+
+    <view class="exDetail_content">
+        <text class="exDetail_titel">就诊动物</text>
+        <text class="exDetail_conts">xxxx</text>
+    </view>
+
+    <view class="exDetail_content">
+        <text class="exDetail_titel">会诊时段</text>
+        <text class="exDetail_conts">xxxx</text>
+    </view>
+    <!-- <mp-cell value="会诊编号" footer="{{diagnosisInfo.recognition.animalName}}"></mp-cell> -->
+    <!-- 1、预约中 2、预约成功-待支付 3、待会诊 4、已结诊 6、已评价-->
+    <!-- <mp-cell value="会诊状态" footer="{{diagnosisInfo.recognition.animalName}}">324324</mp-cell>
+    <mp-cell value="日期时间" footer="{{diagnosisInfo.recognition.animalName}}"></mp-cell>
+    <mp-cell value="就诊动物" footer="{{diagnosisInfo.recognition.animalName}}"></mp-cell>
+    <mp-cell value="接诊专家" footer="{{diagnosisInfo.recognition.animalName}}"></mp-cell>
+    <mp-cell value="会诊时段" footer="{{diagnosisInfo.recognition.animalName}}"></mp-cell> -->
+
+    <!-- 4、已结诊  6、已评价-->
+    <view class="exDetail_content">
+        <text class="exDetail_titel">诊断结果（病历）</text>
+        <text class="exDetail_conts exDetail_medical">点击查看病历</text>
+    </view>
+    <!-- <mp-cell value="诊断结果（病历）">
+        <button class="mini-btn" type="primary" size="mini">点击查看病历</button>
+    </mp-cell> -->
+     <!-- 4、已结诊 6、已评价 -->
+     <view class="exDetail_content_result">
+        <text class="exDetail_content_result_title">结果反馈</text>
+        <text bindtap="contentResult" data-index="0" 
+            class="{{activeds == 0?'exDetail_content_result_actived,exDetail_content_result_solve':'exDetail_content_result_solve'}}">已解决</text>
+        <text  bindtap="contentResult" data-index="1"
+         class="{{activeds == 1?'exDetail_content_result_actived,exDetail_content_result_Unresolved':'exDetail_content_result_Unresolved'}}"
+        >未解决</text>
+    </view>
+    <!-- <mp-cell value="结果反馈">234
+        <text>已解决</text>
+        <text>未解决</text>
+    </mp-cell> -->
+     <!-- 4、已结诊 6、已评价 -->
+     <view>
+        <text>您的评价</text>
+        <!-- 4、已结诊 -->
+        <input class="weui-input" maxlength="10" placeholder="输入您的宝贵意见" />
+        <!-- 6、已评价 -->
+        <text>xxxxxxx</text>
+    </view>
+    <!-- <mp-cell value="你的评价">234
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" maxlength="10" placeholder="输入您的宝贵意见" />
+      </view>
+    </mp-cell> -->
+
+<!-- 2、预约成功-待支付 -->
+
+
+<!-- 4、已结诊 -->
+
+
+
+<!-- <mp-cells title="专家诊断结果">
+    <mp-cell value="诊断编号" footer="{{diagnosisInfo.id}}"></mp-cell>
+    <mp-cell value="诊断日期" footer="{{diagnosisInfo.createdAt}}"></mp-cell>
+    <mp-cell value="诊断进度" footer="{{diagnosisInfo.state}}"></mp-cell>
+    <mp-cell value="专家意见" footer="{{diagnosisInfo.expertResult}}"></mp-cell>
+</mp-cells> -->
+
+<!-- <mp-cells title="智能诊断结果">
+    <mp-cell value="主诉症状" footer="{{diagnosisInfo.recognition.chiefComplaint}}"></mp-cell>
+    <mp-cell value="一般症状" footer="{{diagnosisInfo.recognition.generalInformation}}"></mp-cell>
+    <mp-cell value="疾病" footer="排序度"></mp-cell>
+    <view style="padding-left: 32px" wx:for="{{diagnosisInfo.recognition.diagnosisResult}}"
+          wx:key="index">
+        <mp-cell ext-class="ed_detail_item_sub" value="{{item.diseaseName}}" footer="{{item.probability}}"></mp-cell>
+    </view>
+    <mp-cell link value="更多详情" footer="点此查看" bind:tap="enterAIDiagosisPage"></mp-cell>
+</mp-cells> -->
+    </view>
+    <view class="payments">
+        <view class="payment">立即评价</view>
+    </view>
+    <view class="payments">
+        <view class="payment">立即支付</view>
+    </view>
+    <view class="CancelPayments">
+        <view class="CancelPayment">取消支付</view>
+    </view>
+</view>

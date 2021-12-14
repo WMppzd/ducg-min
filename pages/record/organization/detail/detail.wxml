@@ -1,0 +1,22 @@
+<view data-weui-theme="{{theme}}">
+    <view class="expertLists_expertLists_detail">为小动物选择一位专家吧</view>
+    <block>
+      <view class="expertLists">
+        <view class="expertLists_item">
+            <view class="expertLists_item_img" bind:tap="modifyDetail">
+                <image slot="icon" src="../../../../images/mine_experts.png" class="expertLists_cell"></image>
+                <view class="expertLists_item_img_detail">查看详情</view>
+            </view>
+            <view class="expertLists_item_right">
+                <view class="expertLists_item_right_title">
+                   <text>姓名</text>
+                   <text>xxxxxxxxxxx</text>
+                </view>
+                <view class="expertLists_item_right_content">
+                    <text>xxxxxxxx内容</text>
+                </view>
+            </view>
+        </view>
+      </view>
+    </block>
+</view>

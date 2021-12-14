@@ -17,13 +17,26 @@ CustomPage({
         orders: [],
         totalPageNumber: 0,
         pageNumber: 1,
-        pageSize: 10
+        pageSize: 10,
+        tabIndex:0
     },
 
     onTabClick(e) {
-        const {index} = e.detail.currentTarget.dataset;
-        const activeTab = index === 0;
-        this.setData({activeTab});
+        // const {index} = e.detail.currentTarget.dataset;
+
+        const  tabIndex = e.detail.currentTarget.dataset.index;
+        // const activeTab = tabIndex === 0;
+        console.log(tabIndex);
+        // let categoryId = this.data.categoryId;
+        // if (tabIndex === 0) categoryId = 1;
+        // if (tabIndex === 1) categoryId = 2;
+        // if (tabIndex === 2) categoryId = 3;
+
+        // console.log(e)
+        // const activeTab = index === 0;
+        
+        // const activeTab = tabIndex ;
+        this.setData({tabIndex});
     },
 
     onOrderClick(e) {

@@ -94,5 +94,10 @@ CustomPage({
      */
     onShareAppMessage: function () {
 
+    },
+
+    @wx.api.auth
+    enterOrderPage(e) {
+        wx.navigateTo({url: `../../record/edlist/detail/detail`});
     }
 })

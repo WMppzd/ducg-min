@@ -51,7 +51,7 @@ CustomPage({
         wx.navigateTo({url: `../webpage/webpage?url=${encodeURIComponent(url)}`});
     },
 
-    @wx.api.auth
+    // @wx.api.auth
     enterAI(e) {
         const app = getApp();
         const {animal} = e.currentTarget.dataset;

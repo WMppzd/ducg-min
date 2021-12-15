@@ -1,13 +1,13 @@
 <view data-weui-theme="{{theme}}">
     <view class="expertLists_jp">您的小动物需要这样的刨解吗？如果不需要<text>请点此跳过</text></view>
     <block>
-      <view class="expertLists" bind:tap="enterDiagnosisDetail">
+      <view class="expertLists">
         <view class="expertLists_item">
-            <view class="expertLists_item_img">
+            <view class="expertLists_item_img" bind:tap="enterDiagnosisDetail">
                 <image slot="icon" src="../../../images/mine_experts.png" class="expertLists_cell"></image>
                 <view class="expertLists_item_img_detail">查看详情</view>
             </view>
-            <view class="expertLists_item_right">
+            <view class="expertLists_item_right" bind:tap="enterDiagnosis">
                 <view class="expertLists_item_right_title">
                    <text>xxxxxxxxxxx标题</text>
                 </view>

@@ -18,11 +18,17 @@ CustomPage({
         pageSize: 20
     },
 
+    //详情
     enterDiagnosisDetail(e) {
         // const {diagnosis} = e.currentTarget.dataset;
         // getApp().globalData.diagnosisResult = diagnosis;
+        wx.navigateTo({url: `./stationDetails/stationDetails`});
+    },
+    // 跳转 专家列表
+    enterDiagnosis(e) {
         wx.navigateTo({url: `./detail/detail`});
     },
+
 
     getDiagnosisList(upDown = true) {
         const that = this;

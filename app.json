@@ -27,7 +27,9 @@
         "pages/record/organization/organization",
         "pages/record/organization/detail/detail",
         "pages/record/appointment/appointment",
-        "pages/record/MemberIn/MemberIn"
+        "pages/record/MemberIn/MemberIn",
+        "pages/record/organization/personal/personal",
+        "pages/record/organization/stationDetails/stationDetails"
     ],
     "window": {
         "navigationBarTextStyle": "@navigationBarTextStyle",

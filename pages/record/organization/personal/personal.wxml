@@ -1,11 +1,11 @@
 <view data-weui-theme="{{theme}}">
-    <view class="expertLists_expertLists_detail">为小动物选择一位专家吧</view>
+
     <block>
       <view class="expertLists">
         <view class="expertLists_item">
-            <view class="expertLists_item_img" bind:tap="modifyDetaild">
+            <view class="expertLists_item_img">
                 <image slot="icon" src="../../../../images/mine_experts.png" class="expertLists_cell"></image>
-                <view class="expertLists_item_img_detail">查看详情</view>
+                <view class="expertLists_item_img_detail">专家资料</view>
             </view>
             <view class="expertLists_item_right">
                 <view class="expertLists_item_right_title">
@@ -16,6 +16,10 @@
                     <text>xxxxxxxx内容</text>
                 </view>
             </view>
+        </view>
+
+        <view class="personal_content">
+            xxxxxxxxxxxxxxxxx
         </view>
       </view>
     </block>

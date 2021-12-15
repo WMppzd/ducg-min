@@ -1,0 +1,31 @@
+<!--pages/classdetail/classdetail.wxml-->
+<view class="detail-container">
+    <!-- <video class="detail-video" controls="true" show-mute-btn="true" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video> -->
+    <view class="stationDetails">
+        <image slot="icon" src="../../../../images/mine_experts.png" class="stationDetails_cell"></image>
+        <view class="stationDetails_cell_img_detail">普小慧兽医服务站</view>
+    </view>
+
+    <view class="detail-box">
+        <view class="detail-item">
+            <view class="detail-key">负责人：</view>
+            <view class="detail-value">萨法范德萨</view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">手机号：</view>
+            <view class="detail-value">138888888  <text>拨打</text> </view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">职业年限：</view>
+            <view class="detail-value">萨法范德萨</view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">擅长服务的动物种类：</view>
+            <view class="detail-value">萨法范德萨法范德萨法范德萨法范德萨法范德萨法范德萨法范德萨</view>
+        </view>
+        <view class="detail-item">
+            <view class="detail-key">营业地址：  <text>导航</text> </view>
+            <view class="detail-value">萨法范德萨法范德萨法范德萨法范德萨法范德萨法范德萨法范德萨</view>
+        </view>
+    </view>
+</view>

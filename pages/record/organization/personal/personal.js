@@ -18,6 +18,12 @@ CustomPage({
         pageSize: 20
     },
 
+    enterDiagnosisDetail(e) {
+        // const {diagnosis} = e.currentTarget.dataset;
+        // getApp().globalData.diagnosisResult = diagnosis;
+        wx.navigateTo({url: `./detail/detail`});
+    },
+
     getDiagnosisList(upDown = true) {
         const that = this;
         let requestData = {pageSize: this.data.pageSize};
@@ -73,10 +79,10 @@ CustomPage({
             });
     },
 
-    modifyDetaild(){
-        console.log(99999)
+    modifyDetail(){
+        // console.log(99999)
         // this.setData({dialogShow: true, dialogTitle: "", placeholder: ''});
-        wx.navigateTo({url: `../personal/personal`});
+        wx.navigateTo({url: `./detail/detail`});
     },
 
     /**

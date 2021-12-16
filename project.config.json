@@ -43,7 +43,7 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.16.0",
-    "appid": "wx916308d35f06aac1",
+    "appid": "wx13e46827bd5d850c",
     "projectname": "ducg-min",
     "cloudfunctionTemplateRoot": "",
     "watchOptions": {
@@ -53,6 +53,8 @@
         "hidedInDevtools": []
     },
     "scripts": {},
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
     "condition": {
         "plugin": {
             "list": []

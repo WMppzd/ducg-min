@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/meeting/meeting",
         "pages/diagnosis/diagnosis",
         "pages/mine/mine",
         "pages/mall/mall",
@@ -29,7 +30,8 @@
         "pages/record/appointment/appointment",
         "pages/record/MemberIn/MemberIn",
         "pages/record/organization/personal/personal",
-        "pages/record/organization/stationDetails/stationDetails"
+        "pages/record/organization/stationDetails/stationDetails",
+        "pages/meeting/room/room"
     ],
     "window": {
         "navigationBarTextStyle": "@navigationBarTextStyle",
